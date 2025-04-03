@@ -1,0 +1,90 @@
+.footer {
+  background-color: #12151d;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.subscribe h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.inputGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.inputGroup input {
+  padding: 0.4rem;
+  border: 1px solid #333;
+  background: #1a1d27;
+  color: white;
+  border-radius: 20px;
+  min-width: 200px;
+}
+
+.inputGroup button {
+  background-color: #6966ff;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoSection img {
+  width: 30px;
+  height: 30px;
+}
+
+.brand {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.links a {
+  margin: 0 0.5rem;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.social svg {
+  margin: 0 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.footerBottom {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+.footerBottom select {
+  background: #1a1d27;
+  color: white;
+  border: none;
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+}
