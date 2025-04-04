@@ -1,0 +1,43 @@
+.tripsSection {
+    padding: 3rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .tripsGrid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .tripCard {
+    width: 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .tripCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tripCard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .tripCard h3 {
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .tripCard p {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
