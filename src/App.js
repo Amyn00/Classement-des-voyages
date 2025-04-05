@@ -128,13 +128,16 @@ export default function App() {
         {authView && (
         <div className={authStyles.formContainer}>
           <h2>{authView === "login" ? "Connexion" : "Inscription"}</h2>
-          <input
-            type="text"
-            placeholder="Votre nom d'utilisateur"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <button onClick={handleLogin}>Valider</button>
+          <div className={authStyles.formGroup}>
+            <input
+              type="text"
+              placeholder="Votre nom d'utilisateur"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className={authStyles.input}
+            />
+            <button onClick={handleLogin} className={authStyles.button}>Valider</button>
+          </div>
         </div>
       )}
 
@@ -168,7 +171,7 @@ export default function App() {
               className={styles.fullInput}
             />
           </div>
-          <div className={styles.dayInputRow}>
+          <div className={styles.inputBlock}>
             <input
               type="text"
               placeholder="Ajouter une activité pour un jour"
@@ -176,11 +179,12 @@ export default function App() {
               onChange={(e) => setNewDay(e.target.value)}
               className={styles.fullInput}
             />
-            <button onClick={handleAddDay} className={styles.addButton}>Ajouter</button>
           </div>
+          <button onClick={handleAddDay} className={styles.addButton}>Ajouter</button>
           <ul className={styles.dayList}>
               {currentItinerary.map((day, idx) => (
                 <li key={idx} className={styles.dayItem}>
+                  <span>Jour {idx + 1} : {day}</span>
                   Jour {idx + 1} : {day}
                   <button onClick={() => handleRemoveDay(idx)} className={styles.deleteButton}>🗑️</button>
                 </li>
