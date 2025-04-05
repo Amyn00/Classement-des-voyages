@@ -1,201 +1,305 @@
-.app {
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to bottom right, #f7faff, #ffffff);
-  min-height: 100vh;
-  color: #111;
-}
-
-/* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background-color: #2c7be5;
+  color: white;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
 }
 
 .left {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 1rem;
 }
 
 .logo {
-  width: 40px;
   height: 40px;
 }
 
 .brand {
+  font-size: 1.8rem;
   font-weight: bold;
-  font-size: 24px;
-  color: #111827;
 }
 
 .nav {
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
-.nav a {
-  text-decoration: none;
-  color: #374151;
+.nav button {
+  background-color: white;
+  color: #2c7be5;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 8px;
   font-weight: 500;
-  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav button:hover {
+  background-color: #e4ecff;
 }
 
 .right {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .signupBtn {
-  border: 1px solid #ccc;
-  padding: 8px 16px;
-  border-radius: 6px;
   background-color: white;
+  color: #2c7be5;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
   cursor: pointer;
 }
 
 .signupBtn:hover {
-  background-color: #f3f4f6;
+  background-color: #e0e0e0;
 }
 
-/* MAIN */
-.main {
+.app {
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  background: #f6f8fa;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  padding: 60px 40px;
+  flex-direction: column;
 }
 
-/* SECTION ÉLARGIE */
-.section {
+
+
+
+
+
+
+.nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+
+
+.signupBtn:hover {
+  background-color: #e0e0e0;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.homeContainer {
   width: 100%;
   max-width: 1200px;
-  background-color: #ffffff;
-  padding: 40px 48px;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
-  margin-bottom: 40px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
-/* TITRE & SOUS-TITRE */
 .mainImage {
-  width: 100px;
-  margin: 0 auto 20px auto;
-  display: block;
+  max-width: 100px;
+  margin-bottom: 1.5rem;
 }
 
 .title {
-  font-size: 42px;
-  font-weight: 800;
-  color: #111827;
-  text-align: center;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
+  color: #2c7be5;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  color: #6b7280;
-  font-size: 18px;
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
 }
 
-/* ACTIONS */
 .actions {
   display: flex;
   justify-content: center;
-  gap: 24px;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .actions button {
-  padding: 14px 28px;
-  border-radius: 8px;
-  border: none;
-  background-color: #3b82f6;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #2c7be5;
   color: white;
-  font-weight: 600;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* FORM */
+.actions button:hover {
+  background-color: #1a5ec3;
+}
+
 .input {
   width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 6px;
+  max-width: 500px;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .dayInputGroup {
   display: flex;
-  gap: 12px;
-  margin-top: 12px;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .addButton,
-.shareButton {
-  padding: 12px 24px;
-  background-color: #10b981;
+.shareButton,
+.deleteButton {
+  background-color: #2c7be5;
   color: white;
+  padding: 0.6rem 1.2rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: 600;
 }
 
-.shareButton {
-  margin-top: 24px;
-}
-
-/* JOUR */
-.dayList {
-  margin-top: 20px;
-  list-style: none;
-  padding: 0;
+.addButton:hover,
+.shareButton:hover,
+.deleteButton:hover {
+  background-color: #1a5ec3;
 }
 
 .dayItem {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.deleteButton {
-  background: none;
-  border: none;
-  color: #ef4444;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-/* ITINÉRAIRE */
-.itineraryCard {
-  background-color: #f9fafb;
-  padding: 28px;
-  border-radius: 10px;
-  margin-bottom: 24px;
-  text-align: left;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  margin-bottom: 0.5rem;
 }
 
 .success {
-  color: #10b981;
-  margin-top: 10px;
-  font-weight: bold;
+  color: green;
+  font-weight: 500;
+}
+
+.itineraryCard {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 16px;
+  margin: 1rem auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  text-align: left;
 }
 
 .score {
-  font-weight: bold;
-  color: #f59e0b;
+  color: #555;
 }
 
 .highScore {
+  color: #2c7be5;
   font-weight: bold;
-  color: #16a34a;
+}
+
+.inputBlock {
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dayInputRow {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 1rem auto;
+}
+
+.fullInput {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.addButton {
+  background-color: #2c7be5;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #1a5ec3;
+}
+
+
+.inputBlock {
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dayInputRow {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 1rem auto;
+}
+
+.fullInput {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.addButton {
+  background-color: #2c7be5;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #1a5ec3;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./App.module.css";
+import authStyles from "./AuthForm.module.css";
 import logo from "./assets/logo.png";
 
 // Composants externes
@@ -125,21 +126,21 @@ export default function App() {
       <main className={styles.main}>
         {/* Login/Signup */}
         {authView && (
-          <div className={styles.section}>
-            <h2>{authView === "login" ? "Connexion" : "Inscription"}</h2>
-            <input
-              type="text"
-              placeholder="Votre nom d'utilisateur"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <button onClick={handleLogin}>Valider</button>
-          </div>
-        )}
+        <div className={authStyles.formContainer}>
+          <h2>{authView === "login" ? "Connexion" : "Inscription"}</h2>
+          <input
+            type="text"
+            placeholder="Votre nom d'utilisateur"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <button onClick={handleLogin}>Valider</button>
+        </div>
+      )}
 
         {/* Page d’accueil */}
         {view === "home" && !authView && (
-          <div className={styles.section}>
+          <div className={styles.homeContainer}>
             <img src={logo} alt="Illustration" className={styles.mainImage} />
             <h2 className={styles.title}>Travel Rank</h2>
             <p className={styles.subtitle}>
@@ -156,26 +157,28 @@ export default function App() {
 
         {/* Création d’itinéraire */}
         {view === "create" && (
-          <div className={styles.section}>
+          <div className={styles.homeContainer}>
             <h2>Créer mon itinéraire</h2>
+          <div className={styles.inputBlock}>
             <input
               type="text"
               placeholder="Titre de l’itinéraire (ex: Week-end à Rome)"
               value={itineraryTitle}
               onChange={(e) => setItineraryTitle(e.target.value)}
-              className={styles.input}
+              className={styles.fullInput}
             />
-            <div className={styles.dayInputGroup}>
-              <input
-                type="text"
-                placeholder="Ajouter une activité pour un jour"
-                value={newDay}
-                onChange={(e) => setNewDay(e.target.value)}
-                className={styles.input}
-              />
-              <button onClick={handleAddDay} className={styles.addButton}>Ajouter</button>
-            </div>
-            <ul className={styles.dayList}>
+          </div>
+          <div className={styles.dayInputRow}>
+            <input
+              type="text"
+              placeholder="Ajouter une activité pour un jour"
+              value={newDay}
+              onChange={(e) => setNewDay(e.target.value)}
+              className={styles.fullInput}
+            />
+            <button onClick={handleAddDay} className={styles.addButton}>Ajouter</button>
+          </div>
+          <ul className={styles.dayList}>
               {currentItinerary.map((day, idx) => (
                 <li key={idx} className={styles.dayItem}>
                   Jour {idx + 1} : {day}
@@ -192,7 +195,7 @@ export default function App() {
 
         {/* Classement */}
         {view === "compare" && (
-          <div className={styles.section}>
+          <div className={styles.homeContainer}>
             <h2>Classement des itinéraires</h2>
             {[...sharedItineraries].sort((a, b) => b.score - a.score).map((itinerary) => (
               <div key={itinerary.id} className={styles.itineraryCard}>
@@ -217,7 +220,7 @@ export default function App() {
 
         {/* Explorer */}
         {view === "explore" && (
-          <div className={styles.section}>
+          <div className={styles.homeContainer}>
             <h2>Explorer les itinéraires populaires</h2>
             {exampleItineraries.map((itin, idx) => (
               <div key={idx} className={styles.itineraryCard}>
@@ -236,7 +239,7 @@ export default function App() {
 
         {/* Profil */}
         {view === "profile" && user && (
-          <div className={styles.section}>
+          <div className={styles.homeContainer}>
             <h2>Mon Profil</h2>
             <p>Bienvenue <strong>{user}</strong> !</p>
             <p>Itinéraires partagés : {sharedItineraries.filter(i => i.user === user).length}</p>
