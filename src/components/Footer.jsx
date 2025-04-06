@@ -37,7 +37,7 @@ export default function Footer() {
           <option value="fr">français</option>
           <option value="en">English</option>
         </select>
-        <p>© 2024 Brand, Inc. • Privacy • Terms • Sitemap</p>
+        <p>© 2025 Brand, Inc. • Privacy • Terms • Sitemap</p>
       </div>
     </footer>
   );
